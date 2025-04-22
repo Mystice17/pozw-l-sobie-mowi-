@@ -1,0 +1,15 @@
+document.getElementById("messageForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var message = document.getElementById("message").value;
+    if (message.trim() === "") {
+        alert("Proszę napisać coś, zanim wyślesz!");
+        return;
+    }
+
+    // Po wysłaniu wiadomości, pokazujemy odpowiedź
+    var responseMessage = "Dziękujemy, że się podzieliłeś. Twoje słowa mają znaczenie.";
+
+    document.getElementById("response").innerText = responseMessage;
+    document.getElementById("message").value = ""; // Czyścimy pole tekstowe
+});
